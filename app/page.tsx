@@ -25,9 +25,6 @@ export default async function Home() {
     getUserTrainData(),
   ]);
 
-  console.log("homeData status:", homeData.status);
-  console.log("homeData data:", JSON.stringify(homeData.data));
-
   if (homeData.status !== 200) {
     throw new Error("Failed to fetch home data");
   }
